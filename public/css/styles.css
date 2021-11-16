@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+
+html[data-theme="light"]
+{
+    --primary: #3a2ee9;
+    --primary-light: #6c4cf8;
+    --primary-dark: #281dc9;
+    --primary-lighter: #8679ff;
+    --primary-darker: #461ab6;
+
+    --base-textColor: rgb(45, 51, 59);
+    --base-bold-textColor: rgb(40, 45, 52);
+    --base-bolder-textColor: rgb(34, 39, 46);
+
+    --base: white;
+    --base-hover: #f5f5f5;
+    --base-dark: #dedede;
+    --base-darker: #c0c0c0;
+}
+
+html[data-theme="dark"]
+{
+    --primary: #3a2ee9;
+    --primary-light: #6c4cf8;
+    --primary-dark: #281dc9;
+    --primary-lighter: #8679ff;
+    --primary-darker: #461ab6;
+
+    --base-textColor: #a9a9a9;
+    --base-bold-textColor: #cecece;
+    --base-bolder-textColor: #fff;
+
+    --base: rgb(45, 51, 59);
+    --base-hover: rgb(42, 46, 52);
+    --base-dark: rgb(32, 36, 42);
+    --base-darker: rgb(21, 24, 30);
+}
+
+*
+{
+    border: none;
+    outline: none;
+    transition: all .35s;
+    text-decoration: none;
+}
+
+html
+{
+    color: var(--base-bold-textColor);
+    background: var(--base-dark);
+    font-family: "Lato", serif !important;
+}
+
+h1
+{
+    font-size: 80px;
+}
+
+.form-group
+{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+#themeSwitch
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--base);
+    width: 50px;
+    height: 50px;
+    border-radius: 0.25em;
+    font-size: 25px;
+    cursor: pointer;
+}
+#themeSwitch:hover
+{
+    background: var(--base-hover);
+}
+
+#github
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--base-bold-textColor);
+    background: var(--base);
+    width: 50px;
+    height: 50px;
+    border-radius: 0.25em;
+    font-size: 25px;
+    cursor: pointer;
+}
+#github:hover
+{
+    background: var(--base-hover);
+}
+
+
+.badge
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    padding: 5px;
+    color: white;
+}
+
+.header-div
+{
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 51.5rem;
+    padding: 20px;
+    background: var(--base-darker);
+    margin: 50px auto auto;
+}
+
+
+.back-to-home
+{
+    margin-top: 50px !important;
+    color: var(--primary-light);
+}
+
+.back-to-home:hover
+{
+    color: var(--primary-lighter);
+}
+
+.mySearchParent
+{
+    margin-bottom: 50px;
+}
+
+.mySearchInput
+{
+    color: var(--base-bold-textColor);
+    border: none;
+    width: 40rem;
+    height: 3rem;
+    background-color: var(--base);
+    font-family: sans, serif;
+    text-align: left;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    border-radius: 15px 0 0 15px;
+    cursor: pointer;
+}
+
+.mySearchInput:focus,
+.mySearchInput:focus ~ .mySearchInputIcon
+{
+    background-color: var(--base-darker);
+    outline: none;
+}
+
+.mySearchInputIcon
+{
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--base);
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.mySearchParent:hover .mySearchInputIcon,
+.mySearchParent:hover .mySearchInput
+{
+    background-color: var(--base-hover);
+}
+
+.todo-card
+{
+    min-height: 2rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 51.5rem;
+    padding: 25px;
+    background: var(--base);
+    margin: 20px auto auto;
+}
+.todo-card:hover
+{
+    transform: scale(1.05);
+    background: var(--base-hover);
+}
+.todo-card.todo-success
+{
+    border: 3px dashed var(--primary);
+    background: var(--base-darker);
+}
+
+.todo-card:first-child
+{
+    margin-top: 50px;
+}
+
+.todo-icons
+{
+    display: flex;
+    align-items: center;
+}
+.todo-icon
+{
+    margin: 0 3px;
+    color: var(--primary-light);
+    font-size: 20px;
+}
+.todo-icon:hover
+{
+    color: var(--primary);
+}
+.check:hover
+{
+    color: #12ff5c;
+}
+.trash:hover
+{
+    color: #ff114f;
+}
+.todo-card.todo-success .todo-icon
+{
+    color: var(--primary);
+}
+.todo-card.todo-success .todo-icon:hover
+{
+    color: #ff114f;
+}
+
+@media (max-width: 700px)
+{
+    h1
+    {
+        font-size: 35px;
+    }
+    .mySearchInput
+    {
+        width: 50%;
+        padding: 1rem;
+    }
+    .mySearchInputIcon
+    {
+        height: 5rem;
+    }
+    .header-div
+    {
+        width: 80%;
+        font-size: 10px;
+        padding: 10px;
+    }
+    .badge
+    {
+        width: 10px;
+        height: 10px;
+    }
+    .todo-card
+    {
+        width: 70%;
+        padding: 15px 25px;
+    }
+}
+
+
+.flex
+{
+    display: flex;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.text-center
+{
+    text-align: center;
+}
+.justify-content-center
+{
+    justify-content: center;
+}

@@ -1,0 +1,43 @@
+<%- include ('./includes/head.ejs') %>
+
+<div class="form-group">
+
+    <div id="themeSwitch">
+        <i class="fas fa-sun" id="themeIcon"></i>
+    </div>
+
+    <a id="github" href="https://github.com/im-parsa/MyTodoList" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+    <h1>MyTodoList</h1>
+
+    <%- include ('./includes/todoForm.ejs') %>
+
+    <div class="header-div">
+
+        <div class="center">
+
+            <p> Todo done : </p>
+            <p class="badge">
+                <%= completedTodos %>
+            </p>
+
+        </div>
+
+        <div class="center">
+
+            <p> Remaining Todo today : </p>
+            <p class="badge">
+                <%= remainingTodos %>
+            </p>
+
+        </div>
+
+    </div>
+
+    <%- include ('./includes/todos.ejs') %>
+</div>
+
+<%- include ('./includes/footer.ejs') %>

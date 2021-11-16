@@ -1,0 +1,44 @@
+<% if(todos.length > 0) { %>
+
+    <section id="todo">
+        <% for(let todo of todos) { %>
+
+            <div class="todo-card <%= todo.completed ? 'todo-success' : '' %>">
+
+                <% if(todo.completed) {%>
+
+                    <p><%= todo.text %> - <%= formatDate(todo.createdAt) %></p>
+
+                    <div class="todo-icons">
+                        <a href="/admin/delete-todo/<%= todo.id %>" class="todo-icon bi-trash trash"></a>
+                    </div>
+
+                <% } else { %>
+
+                    <p><%= todo.text %> - <%= formatDate(todo.createdAt) %></p>
+
+                    <div class="todo-icons">
+
+                        <a href="/admin/completed-todo/<%= todo.id %>" class="todo-icon bi-check check"></a>
+                        <a href="/admin/delete-todo/<%= todo.id %>" class="todo-icon bi-trash trash"></a>
+
+                    </div>
+
+                <% } %>
+
+            </div>
+
+        <% } %>
+    </section>
+
+<% } else { %>
+
+    <div class="alert alert-warning w-50 mx-auto" role="alert">
+
+        <h4 class="alert-heading">There is nothing Todo today</h4>
+        <p>You can write your work today to prove it to you</p>
+        <hr>
+
+    </div>
+
+<% } %>
