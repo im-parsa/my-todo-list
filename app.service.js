@@ -1,5 +1,4 @@
-const xss = require('xss-clean'),
-    express = require("express"),
+const express = require("express"),
     compression = require("compression"),
 
     indexRoutes = require("./routes/main.routing"),
@@ -20,8 +19,6 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 app.use(express.json());
-
-app.use(xss());
 
 app.use(compression());
 
